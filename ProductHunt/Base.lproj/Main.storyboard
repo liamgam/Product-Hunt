@@ -29,21 +29,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-Cf-bfs">
-                                                    <rect key="frame" x="8" y="5.5" width="359" height="236"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-Cf-bfs">
+                                                    <rect key="frame" x="8" y="40" width="359" height="160"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="156" translatesAutoresizingMaskIntoConstraints="NO" id="8mX-yC-w7z">
-                                                    <rect key="frame" x="15" y="11" width="344.5" height="23.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="156" translatesAutoresizingMaskIntoConstraints="NO" id="8mX-yC-w7z">
+                                                    <rect key="frame" x="15" y="11" width="345" height="23.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJv-Bl-p6e">
-                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46.5" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3dH-Wz-99n">
-                                                            <rect key="frame" x="202" y="0.0" width="142.5" height="23.5"/>
+                                                            <rect key="frame" x="202.5" y="0.0" width="142.5" height="23.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq2-mD-vwb">
                                                                     <rect key="frame" x="0.0" y="0.0" width="84" height="23.5"/>
@@ -60,21 +59,28 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="3dH-Wz-99n" firstAttribute="top" secondItem="8mX-yC-w7z" secondAttribute="top" id="42W-C5-W4n"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3dH-Wz-99n" secondAttribute="trailing" id="9cd-Ta-16H"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI8-gg-dzh">
-                                                    <rect key="frame" x="15" y="219.5" width="345" height="19.5"/>
+                                                    <rect key="frame" x="15" y="208" width="345" height="31"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="XLr-Cf-bfs" secondAttribute="trailing" constant="8" id="078-AO-sJf"/>
                                                 <constraint firstItem="eI8-gg-dzh" firstAttribute="leading" secondItem="057-Vb-KOt" secondAttribute="leadingMargin" id="BVL-dw-DuB"/>
-                                                <constraint firstItem="XLr-Cf-bfs" firstAttribute="leading" secondItem="057-Vb-KOt" secondAttribute="leading" constant="8" id="Hv9-np-HVq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="eI8-gg-dzh" secondAttribute="trailing" id="Kcd-uK-zvA"/>
-                                                <constraint firstItem="XLr-Cf-bfs" firstAttribute="top" secondItem="057-Vb-KOt" secondAttribute="top" constant="5.5" id="gVF-aA-MIr"/>
-                                                <constraint firstAttribute="bottom" secondItem="XLr-Cf-bfs" secondAttribute="bottom" constant="8" id="rap-Wd-YiK"/>
+                                                <constraint firstItem="eI8-gg-dzh" firstAttribute="top" secondItem="XLr-Cf-bfs" secondAttribute="bottom" constant="8" id="MFD-JE-Yie"/>
+                                                <constraint firstItem="XLr-Cf-bfs" firstAttribute="top" secondItem="8mX-yC-w7z" secondAttribute="bottom" constant="5.5" id="RJ2-Yj-WBW"/>
+                                                <constraint firstItem="8mX-yC-w7z" firstAttribute="top" secondItem="057-Vb-KOt" secondAttribute="topMargin" id="UXf-SK-dwy"/>
+                                                <constraint firstItem="8mX-yC-w7z" firstAttribute="leading" secondItem="057-Vb-KOt" secondAttribute="leadingMargin" id="XYq-IX-cAX"/>
+                                                <constraint firstItem="XLr-Cf-bfs" firstAttribute="leading" secondItem="057-Vb-KOt" secondAttribute="leading" constant="8" id="exQ-OS-lcN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8mX-yC-w7z" secondAttribute="trailing" id="lF3-jt-AHs"/>
+                                                <constraint firstAttribute="trailing" secondItem="XLr-Cf-bfs" secondAttribute="trailing" constant="8" id="lph-TQ-YsV"/>
                                                 <constraint firstItem="eI8-gg-dzh" firstAttribute="bottom" secondItem="057-Vb-KOt" secondAttribute="bottomMargin" id="txf-Dt-Vh1"/>
                                             </constraints>
                                         </tableViewCellContentView>
