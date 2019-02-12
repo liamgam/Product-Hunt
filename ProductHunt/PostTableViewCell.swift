@@ -22,6 +22,7 @@ class PostTableViewCell: UITableViewCell {
             nameLabel.text = post.name
             commentsLabel.text = "Comments: \(post.commentsCount)"
             votesLabel.text = "Votes: \(post.votesCount)"
+            taglineLabel.text = post.tagline
             updatePreviewImage()
         }
     }
