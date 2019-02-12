@@ -10,10 +10,25 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var votesLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     
-    @IBOutlet weak var previewImageView: UIImageView!
+    var post: Post? {
+        didSet {
+            guard let post = post else { return }
+            nameLabel.text = post.name
+            commentsLabel.text = "Comments: \(post.commentsCount)"
+            votesLabel.text = "Votes: \(post.votesCount)"
+            updatePreviewImage()
+        }
+    }
+    
+    func updatePreviewImage() {
+        guard let post = post else { return }
+        previewImageView.image = UIImage(named: "placeholder")
+    }
+    
 }
