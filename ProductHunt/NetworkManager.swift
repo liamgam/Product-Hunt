@@ -44,4 +44,62 @@ class NetworkManager {
         task.resume()
     }
     
+    
+    enum EndPoints {
+        case posts
+        case comments(postId: Int)
+        
+        func getPath() -> String {
+            switch self {
+            case .posts:
+                return "posts/all"
+            case .comments:
+                return "comments"
+            }
+        }
+        
+        func getHttpMethod() -> String {
+            return "GET"
+        }
+        
+        func getHeaders(token: String) -> [String: String] {
+            return [
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": "Bearer \(token)",
+                "Host": "api.producthunt.com"
+            ]
+        }
+        
+        func getParams() -> [String: String] {
+            switch self {
+            case .posts:
+                return [
+                    "sort_by": "votes_count",
+                    "order": "desc",
+                    "per_page": "20",
+                    
+                    "search[featured]": "true"
+                ]
+                
+            case let .comments(postId):
+                return [
+                    "sort_by": "votes",
+                    "order": "asc",
+                    "per_page": "20",
+                    
+                    "search[post_id]": "\(postId)"
+                ]
+            }
+        }
+        
+        func paramsToString() -> String {
+            let parameterArray = getParams().map { key, value in
+                return "\(key)=\(value)"
+            }
+            
+            return parameterArray.joined(separator: "&")
+        }
+    }
+    
 }
