@@ -49,5 +49,4 @@ extension Post: Decodable {
         let screenshotContainer = try postContainer.nestedContainer(keyedBy: PreviewImageURLKeys.self, forKey: .previewImageUrl)
         previewImageUrl = try screenshotContainer.decode(URL.self, forKey: .imageUrl)
     }
-    
 }
