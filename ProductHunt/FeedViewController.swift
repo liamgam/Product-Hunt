@@ -56,4 +56,13 @@ extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let commentsView = storyBoard.instantiateViewController(withIdentifier: "commentsView") as? CommentsViewController else { return }
+        commentsView.comments = ["great app!", "gorgeous UI.", "Wow."]
+        navigationController?.pushViewController(commentsView, animated: true)
+    }
 }

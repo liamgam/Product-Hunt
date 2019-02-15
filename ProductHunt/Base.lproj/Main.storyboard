@@ -114,6 +114,64 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
+        <!--Comments View Controller-->
+        <scene sceneID="9ah-TH-PHi">
+            <objects>
+                <viewController storyboardIdentifier="commentsView" id="Y9Y-tq-1Y7" customClass="CommentsViewController" customModule="ProductHunt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqq-Cs-fJv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9X8-R3-ZvM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="125" id="FVZ-ql-5zL" customClass="CommentsTableViewCell" customModule="ProductHunt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FVZ-ql-5zL" id="3tH-Me-FLu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GZP-of-DJL">
+                                                    <rect key="frame" x="15" y="15" width="345" height="94.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GZP-of-DJL" secondAttribute="bottom" constant="15" id="VZ5-ey-UzR"/>
+                                                <constraint firstItem="GZP-of-DJL" firstAttribute="top" secondItem="3tH-Me-FLu" secondAttribute="top" constant="15" id="YCE-F3-hCw"/>
+                                                <constraint firstItem="GZP-of-DJL" firstAttribute="leading" secondItem="3tH-Me-FLu" secondAttribute="leading" constant="15" id="cbu-fF-TdJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="GZP-of-DJL" secondAttribute="trailing" constant="15" id="x4S-0h-aPb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentTextView" destination="GZP-of-DJL" id="Rjq-jB-NCx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9X8-R3-ZvM" firstAttribute="top" secondItem="0HD-nH-f3t" secondAttribute="top" id="3DN-FG-CR9"/>
+                            <constraint firstItem="0HD-nH-f3t" firstAttribute="bottom" secondItem="9X8-R3-ZvM" secondAttribute="bottom" id="54a-Xt-VR3"/>
+                            <constraint firstItem="0HD-nH-f3t" firstAttribute="trailing" secondItem="9X8-R3-ZvM" secondAttribute="trailing" id="UI3-EM-aaA"/>
+                            <constraint firstItem="9X8-R3-ZvM" firstAttribute="leading" secondItem="0HD-nH-f3t" secondAttribute="leading" id="ogg-nI-eFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0HD-nH-f3t"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentsTableView" destination="9X8-R3-ZvM" id="cTy-wQ-pzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmu-og-P0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.5999999999999" y="133.5832083958021"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RAM-B8-49e">
             <objects>
