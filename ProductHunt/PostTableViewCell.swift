@@ -23,13 +23,18 @@ class PostTableViewCell: UITableViewCell {
             commentsLabel.text = "Comments: \(post.commentsCount)"
             votesLabel.text = "Votes: \(post.votesCount)"
             taglineLabel.text = post.tagline
-            previewImageView.image = UIImage(named: "placeholder")
             updatePreviewImage()
         }
     }
     
     func updatePreviewImage() {
         guard let post = post else { return }
+        URLSession.shared.dataTask(with: post.previewImageUrl) { (data, response, error) in
+            guard let data = data, error == nil else { return }
+            DispatchQueue.main.async {
+                self.previewImageView.image = UIImage(data: data)
+            }
+        }.resume()
     }
     
 }
