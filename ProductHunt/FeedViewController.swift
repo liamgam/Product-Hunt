@@ -67,7 +67,7 @@ extension FeedViewController: UITableViewDelegate {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let commentsView = storyBoard.instantiateViewController(withIdentifier: "commentsView") as? CommentsViewController else { return }
-        commentsView.comments = ["great app!", "gorgeous UI.", "Wow."]
+        commentsView.postId = post.id
         navigationController?.pushViewController(commentsView, animated: true)
     }
 }
