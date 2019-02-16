@@ -30,8 +30,13 @@ class FeedViewController: UIViewController {
     }
     
     func updateFeed() {
-        networkManager.getPost() { result in
-            self.posts = result
+        networkManager.getPost() { (result) in
+            switch result {
+            case let .success(posts):
+                self.posts = posts
+            case let .failure(error):
+                print(error)
+            }
         }
     }
 
