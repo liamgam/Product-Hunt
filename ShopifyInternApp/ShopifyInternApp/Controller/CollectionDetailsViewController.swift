@@ -35,6 +35,7 @@ class CollectionDetailsViewController: UIViewController, UICollectionViewDelegat
             self.collectionView.dataSource = self
         }
         collectionTitle.text = collectionTitleString
+        flowLayout()
     }
     
     func flowLayout() {
